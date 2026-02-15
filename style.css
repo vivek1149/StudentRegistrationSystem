@@ -1,0 +1,230 @@
+/* ---------- GLOBAL ---------- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background: linear-gradient(135deg, #fff0f5, #ffe4b5, #fffacd);
+  color: #333;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  transition: background 0.3s ease;
+}
+
+/* ---------- HEADER ---------- */
+.header {
+  text-align: center;
+  padding: 2rem 1rem;
+  background: linear-gradient(90deg, #ff9966, #ff5e62, #d16ba5);
+  color: white;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+  animation: fadeInDown 1s ease-in-out;
+}
+.header h1 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+  letter-spacing: 1px;
+}
+.header p {
+  opacity: 0.9;
+  font-size: 1rem;
+}
+
+/* ---------- MAIN CONTAINER ---------- */
+.container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+  gap: 2rem;
+  padding: 2rem;
+  flex: 1;
+}
+
+/* ---------- FORM SECTION ---------- */
+.form-section {
+  background: #ffffffcc;
+  padding: 1.5rem;
+  border-radius: 14px;
+  box-shadow: 0 3px 15px rgba(255, 182, 193, 0.4);
+  animation: fadeInLeft 1s ease-in-out;
+}
+.form-section h2 {
+  color: #d16ba5;
+  margin-bottom: 1rem;
+  font-weight: 700;
+  text-align: center;
+}
+
+input {
+  width: 100%;
+  padding: 0.7rem;
+  margin-bottom: 0.8rem;
+  border: 2px solid #fbcfe8;
+  border-radius: 8px;
+  transition: 0.3s;
+}
+input:focus {
+  outline: none;
+  border-color: #ff5e62;
+  box-shadow: 0 0 5px #fda4af;
+}
+
+.buttons {
+  display: flex;
+  gap: 10px;
+}
+
+button {
+  flex: 1;
+  padding: 0.7rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+/* Vibrant Button Colors */
+.add-btn {
+  background: linear-gradient(90deg, #00c9a7, #92fe9d);
+  color: white;
+}
+.add-btn:hover {
+  transform: scale(1.05);
+  background: linear-gradient(90deg, #00bfa5, #6effa3);
+}
+
+.reset-btn {
+  background: linear-gradient(90deg, #f6d365, #fda085);
+  color: white;
+}
+.reset-btn:hover {
+  transform: scale(1.05);
+  background: linear-gradient(90deg, #fbb034, #ffdd00);
+}
+
+/* ---------- TABLE SECTION ---------- */
+.table-section {
+  background: #ffffffcc;
+  padding: 1.5rem;
+  border-radius: 14px;
+  box-shadow: 0 3px 15px rgba(255, 183, 197, 0.4);
+  animation: fadeInRight 1s ease-in-out;
+}
+.table-section h2 {
+  text-align: center;
+  color: #ff5e62;
+  margin-bottom: 0.5rem;
+}
+
+.count {
+  text-align: center;
+  color: #6b21a8;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+.table-wrapper {
+  max-height: 400px;
+  overflow-y: auto;
+  padding-right: 5px;
+}
+
+.student-card {
+  background: linear-gradient(120deg, #ffe4e6, #fff5f7);
+  border: 1px solid #fcd34d;
+  border-radius: 10px;
+  padding: 12px 16px;
+  margin-bottom: 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  animation: slideIn 0.5s ease;
+  transition: 0.3s;
+}
+.student-card:hover {
+  transform: scale(1.02);
+  background: linear-gradient(120deg, #fff0f5, #fef9c3);
+  box-shadow: 0 4px 12px rgba(255, 192, 203, 0.6);
+}
+
+.student-info {
+  flex: 1;
+}
+.student-info p {
+  font-size: 0.9rem;
+}
+
+.actions button {
+  padding: 6px 10px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  margin-left: 5px;
+  font-weight: 600;
+  transition: 0.2s;
+}
+.edit {
+  background: #facc15;
+}
+.edit:hover {
+  background: #fbbf24;
+  transform: scale(1.05);
+}
+.delete {
+  background: #ef4444;
+  color: white;
+}
+.delete:hover {
+  background: #dc2626;
+  transform: scale(1.05);
+}
+
+.clear-all {
+  margin-top: 1rem;
+  padding: 0.6rem 1rem;
+  background: linear-gradient(90deg, #ff9a9e, #fecfef);
+  color: #7f1d1d;
+  border-radius: 8px;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+}
+.clear-all:hover {
+  background: linear-gradient(90deg, #f87171, #fde68a);
+  color: white;
+  transform: scale(1.05);
+}
+
+/* ---------- FOOTER ---------- */
+.footer {
+  text-align: center;
+  padding: 1rem;
+  background: #ffe4e6;
+  font-size: 0.9rem;
+  color: #444;
+  font-weight: 500;
+  box-shadow: 0 -2px 10px rgba(255, 182, 193, 0.3);
+}
+
+/* ---------- ANIMATIONS ---------- */
+@keyframes fadeInDown {
+  from {opacity: 0; transform: translateY(-20px);}
+  to {opacity: 1; transform: translateY(0);}
+}
+@keyframes fadeInLeft {
+  from {opacity: 0; transform: translateX(-20px);}
+  to {opacity: 1; transform: translateX(0);}
+}
+@keyframes fadeInRight {
+  from {opacity: 0; transform: translateX(20px);}
+  to {opacity: 1; transform: translateX(0);}
+}
+@keyframes slideIn {
+  from {opacity: 0; transform: translateY(10px);}
+  to {opacity: 1; transform: translateY(0);}
+}

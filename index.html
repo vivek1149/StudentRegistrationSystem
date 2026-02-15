@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Student Registration System</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="header">
+    <h1>🎓 Student Registration System</h1>
+    <p>Smart way to manage student records — Add, Edit & Delete</p>
+  </header>
+
+  <main class="container">
+    <section class="form-section">
+      <h2>➕ Add / Edit Student</h2>
+      <form id="studentForm">
+        <input id="name" type="text" placeholder="Full Name" />
+        <input id="studentId" type="text" placeholder="Student ID" />
+        <input id="email" type="email" placeholder="Email ID" />
+        <input id="contact" type="text" placeholder="Contact Number" />
+        <input type="hidden" id="editingIndex" value="-1" />
+        <div class="buttons">
+          <button id="submitBtn" type="submit" class="add-btn">Add Student</button>
+          <button id="resetBtn" type="button" class="reset-btn">Reset</button>
+        </div>
+      </form>
+    </section>
+
+    <section class="table-section">
+      <h2>📋 Registered Students</h2>
+      <p class="count">Total Students: <span id="totalCount">0</span></p>
+      <div id="tableWrapper" class="table-wrapper">
+        <p id="emptyState" class="empty">No students added yet.</p>
+      </div>
+      <button id="clearAllBtn" class="clear-all">🗑️ Clear All</button>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>© 2026 Student Registration Portal | Created by Vivek</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
