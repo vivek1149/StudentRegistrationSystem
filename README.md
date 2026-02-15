@@ -32,13 +32,7 @@ This project allows you to **add, edit, delete, and manage student records** wit
 4. All data is saved in your **browser LocalStorage**  
 5. Click **Clear All** to reset everything  
 
----
 
-## 🚀 Live Demo
-
-👉 [**Click Here to Open Live Project**](https://vivek1149.github.io/StudentRegistrationSystem/)
-
----
 
 ## 🧩 Folder Structure
 
